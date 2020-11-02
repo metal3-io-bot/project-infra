@@ -7,10 +7,10 @@ plank:
   default_decoration_configs:
     '*':
       utility_images:
-        clonerefs: "gcr.io/k8s-prow/clonerefs:v20191219-ecbeba384"
-        initupload: "gcr.io/k8s-prow/initupload:v20191219-ecbeba384"
-        entrypoint: "gcr.io/k8s-prow/entrypoint:v20191219-ecbeba384"
-        sidecar: "gcr.io/k8s-prow/sidecar:v20191219-ecbeba384"
+        clonerefs: "gcr.io/k8s-prow/clonerefs:v20201030-914f29394d"
+        initupload: "gcr.io/k8s-prow/initupload:v20201030-914f29394d"
+        entrypoint: "gcr.io/k8s-prow/entrypoint:v20201030-914f29394d"
+        sidecar: "gcr.io/k8s-prow/sidecar:v20201030-914f29394d"
       gcs_configuration:
         bucket: metal3-prow-artifacts
         path_strategy: explicit
@@ -109,7 +109,7 @@ periodics:
    decorate: true
    spec:
      containers:
-     - image: gcr.io/k8s-prow/commenter:v20191219-ecbeba384
+     - image: gcr.io/k8s-prow/commenter:v20201030-914f29394d
        command:
        - /app/robots/commenter/app.binary
        args:
@@ -142,7 +142,7 @@ periodics:
    decorate: true
    spec:
      containers:
-     - image: gcr.io/k8s-prow/commenter:v20191219-ecbeba384
+     - image: gcr.io/k8s-prow/commenter:v20201030-914f29394d
        command:
        - /app/robots/commenter/app.binary
        args:
@@ -499,7 +499,7 @@ presubmits:
     decorate: true
     spec:
       containers:
-      - image: gcr.io/k8s-prow/checkconfig:v20191219-ecbeba384
+      - image: gcr.io/k8s-prow/checkconfig:v20201030-914f29394d
         args:
         - "/checkconfig"
         - "--config-path"
